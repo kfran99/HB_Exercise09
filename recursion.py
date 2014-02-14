@@ -14,19 +14,31 @@ def factorial(n):
 
 # Count the number of elements in the list l
 def count_list(l):
+    count = 1
     if len(l) == 1:
-        return l[0]
+        return 1
     else:
-        return l[0] + count_list(l[1:])
+        count = count_list(l[1:]) + 1
+    return count 
 
 # Sum all of the elements in a list
 def sum_list(l):
-    return 0
-
+    if len(l) == 1:
+        return l[0]
+    else:
+        return l[0] + sum_list(l[1:])
+ 
 
 # Reverse a list without slicing or loops
 def reverse(l):
-    return []
+    if len(l) == 1:
+        return l
+    else:  
+        popped = l.pop(0)       
+        reverse(l)        
+        l.append(popped)               
+    return l
+
 
 # Fibonacci returns the nth fibonacci number. The nth fibonacci number is
 # defined as fib(n) = fib(n-1) + fib(n-2)
