@@ -43,7 +43,10 @@ def reverse(l):
 # Fibonacci returns the nth fibonacci number. The nth fibonacci number is
 # defined as fib(n) = fib(n-1) + fib(n-2)
 def fibonacci(n):
-    pass
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
 
 # Finds the item i in the list l.... RECURSIVELY
 def find(l, i):
