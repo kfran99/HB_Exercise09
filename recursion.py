@@ -50,7 +50,12 @@ def fibonacci(n):
 
 # Finds the item i in the list l.... RECURSIVELY
 def find(l, i):
-    return None
+    if l[0] == i:
+        return True
+    elif len(l) == 1:
+        return False
+    else:
+        return find(l[1:], i)
 
 # Determines if a string is a palindrome
 def palindrome(some_string):
